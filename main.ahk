@@ -1,4 +1,4 @@
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -81,14 +81,6 @@ global F3Processes := []
 global F3Index := 1
 global F4Processes := []
 global F4Index := 1
-; global F5Processes := []
-; global F5Index := 1
-; global F6Processes := []
-; global F6Index := 1
-; global F7Processes := []
-; global F7Index := 1
-; global F8Processes := []
-; global F8Index := 1
 
 GroupAdd, %BrowserGroup%, ahk_exe %BrowserExe%
 GroupAdd, %TerminalGroup%, ahk_exe %TerminalExe%
@@ -112,42 +104,6 @@ GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
 ^!t:: InsertCurrentTime()
 ^!n:: InsertCurrentTimeMachineFormat()
 ^!F12:: Reload
-
-; #F1:: AddToFGroup(F1Processes, F1Index)
-; #F2:: AddToFGroup(F2Processes, F2Index)
-; #F3:: AddToFGroup(F3Processes, F3Index)
-; #F4:: AddToFGroup(F4Processes, F4Index)
-; #F5:: AddToFGroup(F5Processes, F5Index)
-; #F6:: AddToFGroup(F6Processes, F6Index)
-; #F7:: AddToFGroup(F7Processes, F7Index)
-; #F8:: AddToFGroup(F8Processes, F8Index)
-
-; ^F1:: ClearFGroup(F1Processes, F1Index)
-; ^F2:: ClearFGroup(F2Processes, F2Index)
-; ^F3:: ClearFGroup(F3Processes, F3Index)
-; ^F4:: ClearFGroup(F4Processes, F4Index)
-; ^F5:: ClearFGroup(F5Processes, F5Index)
-; ^F6:: ClearFGroup(F6Processes, F6Index)
-; ^F7:: ClearFGroup(F7Processes, F7Index)
-; ^F8:: ClearFGroup(F8Processes, F8Index)
-
-; ^!F1:: SwitchToFGroup(F1Processes, F1Index)
-; ^!F2:: SwitchToFGroup(F2Processes, F2Index)
-; ^!F3:: SwitchToFGroup(F3Processes, F3Index)
-; ^!F4:: SwitchToFGroup(F4Processes, F4Index)
-; ^!F5:: SwitchToFGroup(F5Processes, F5Index)
-; ^!F6:: SwitchToFGroup(F6Processes, F6Index)
-; ^!F7:: SwitchToFGroup(F7Processes, F7Index)
-; ^!F8:: SwitchToFGroup(F8Processes, F8Index)
-
-; >!F1:: SwitchToFGroup(F1Processes, F1Index)
-; >!F2:: SwitchToFGroup(F2Processes, F2Index)
-; >!F3:: SwitchToFGroup(F3Processes, F3Index)
-; >!F4:: SwitchToFGroup(F4Processes, F4Index)
-; >!F5:: SwitchToFGroup(F5Processes, F5Index)
-; >!F6:: SwitchToFGroup(F6Processes, F6Index)
-; >!F7:: SwitchToFGroup(F7Processes, F7Index)
-; >!F8:: SwitchToFGroup(F8Processes, F8Index)
 
 ^!CapsLock:: Send, {CapsLock}
 CapsLock:: Send, {Escape}
