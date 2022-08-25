@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -96,8 +96,8 @@ GroupAdd, %VSCodeGroup%, ahk_exe %VSCodeExe%
 GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
 
 >!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
->!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
->!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
+>!2:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
+>!3:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
 >!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
 >!h:: Send, {^}{Space}
 >!t:: InsertCurrentTime()
@@ -105,8 +105,8 @@ GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
 >!F12:: Reload
 
 ^!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
-^!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
-^!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
+^!2:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
+^!3:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
 ^!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
 ^!h:: Send, {^}{Space}
 ^!t:: InsertCurrentTime()
