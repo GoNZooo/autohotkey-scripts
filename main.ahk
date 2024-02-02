@@ -88,8 +88,8 @@ GroupAdd, %VSCodeGroup%, ahk_exe %VSCodeExe%
 GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
 
 >!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
->!2:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
->!3:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
+>!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
+>!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
 >!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
 >!h:: Send, {^}{Space}
 >!t:: InsertCurrentTime()
@@ -97,8 +97,8 @@ GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
 >!F12:: Reload
 
 ^!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
-^!2:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
-^!3:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
+^!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
+^!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
 ^!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
 ^!h:: Send, {^}{Space}
 ^!t:: InsertCurrentTime()
