@@ -73,6 +73,10 @@ EmailStart := "C:\Program Files\Mozilla Thunderbird\thunderbird.exe"
 EmailExe := "thunderbird.exe"
 EmailGroup := "Email"
 
+ObsidianStart := "C:\Users\ricka\AppData\Local\Programs\obsidian\Obsidian.exe"
+ObsidianExe := "Obsidian.exe"
+ObsidianGroup := "Obsidian"
+
 global F1Processes := []
 global F1Index := 1
 global F2Processes := []
@@ -81,25 +85,31 @@ global F3Processes := []
 global F3Index := 1
 global F4Processes := []
 global F4Index := 1
+global F6Processes := []
+global F6Index := 1
 
 GroupAdd, %BrowserGroup%, ahk_exe %BrowserExe%
 GroupAdd, %TerminalGroup%, ahk_exe %TerminalExe%
 GroupAdd, %VSCodeGroup%, ahk_exe %VSCodeExe%
 GroupAdd, %EmailGroup%, ahk_exe %EmailExe%
+GroupAdd, %ObsidianGroup%, ahk_exe %ObsidianExe%
 
 >!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
 >!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
 >!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
 >!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
+>!6:: OpenOrSwitchTo(ObsidianExe, ObsidianStart, ObsidianGroup)
 >!h:: Send, {^}{Space}
 >!t:: InsertCurrentTime()
 >!n:: InsertCurrentTimeMachineFormat()
 >!F12:: Reload
+^Tab:: Clip(A_TAB)
 
 ^!1:: OpenOrSwitchTo(BrowserExe, BrowserStart, BrowserGroup)
 ^!2:: OpenOrSwitchTo(VSCodeExe, VSCodeStart, VSCodeGroup)
 ^!3:: OpenOrSwitchTo(TerminalExe, TerminalStart, TerminalGroup)
 ^!4:: OpenOrSwitchTo(EmailExe, EmailStart, EmailGroup)
+^!6:: OpenOrSwitchTo(ObsidianExe, ObsidianStart, ObsidianGroup)
 ^!h:: Send, {^}{Space}
 ^!t:: InsertCurrentTime()
 ^!n:: InsertCurrentTimeMachineFormat()
